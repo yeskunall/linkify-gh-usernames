@@ -1,4 +1,4 @@
-# linkify-gh-usernames [![Build Status](https://travis-ci.org/yeskunall/linkify-gh-usernames.svg?branch=master)](https://travis-ci.org/yeskunall/linkify-gh-usernames)
+# linkify-gh-usernames [![Build Status](https://travis-ci.com/yeskunall/linkify-gh-usernames.svg?token=spivxcgb7rpR2xs6dNUP&branch=master)](https://travis-ci.com/yeskunall/linkify-gh-usernames)
 
 > Linkify GitHub usernames
 
