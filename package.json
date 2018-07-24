@@ -1,0 +1,42 @@
+{
+  "name": "linkify-gh-usernames",
+  "version": "0.0.1",
+  "description": "Linkify GitHub usernames",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeskunall/linkify-gh-usernames.git"
+  },
+  "keywords": [
+    "gh",
+    "github",
+    "linkify",
+    "usernames"
+  ],
+  "author": "Kunall Banerjee <yeskunall96@gmail.com> (https://kimchi.now.sh/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yeskunall/linkify-gh-usernames/issues"
+  },
+  "homepage": "https://github.com/yeskunall/linkify-gh-usernames#readme",
+  "dependencies": {
+    "create-html-element": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "xo": "^0.21.1"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "space": true
+  }
+}
