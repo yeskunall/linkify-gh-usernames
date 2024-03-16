@@ -4,8 +4,8 @@
 
 ## Install
 
-> [!NOTE] This package is
-> [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
+> [!NOTE]
+> This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ```
 $ npm install linkify-gh-usernames
