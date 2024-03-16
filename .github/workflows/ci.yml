@@ -1,7 +1,12 @@
 name: CI
+
 on:
-  - push
-  - pull_request
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
 jobs:
   test:
     name: Node.js ${{ matrix.node-version }}
@@ -10,7 +15,9 @@ jobs:
       fail-fast: false
       matrix:
         node-version:
-          - ["16.x", "18.x", "20.x"]
+          - "16.x"
+          - "18.x"
+          - "20.x"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
