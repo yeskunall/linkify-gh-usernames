@@ -1,42 +1,52 @@
 {
   "name": "linkify-gh-usernames",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Linkify GitHub usernames",
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yeskunall/linkify-gh-usernames.git"
-  },
   "keywords": [
     "gh",
     "github",
+    "link",
     "linkify",
+    "username",
     "usernames"
   ],
-  "author": "Kunall Banerjee <yeskunall96@gmail.com> (https://kimchi.now.sh/)",
-  "license": "MIT",
+  "homepage": "https://github.com/yeskunall/linkify-gh-usernames#readme",
   "bugs": {
     "url": "https://github.com/yeskunall/linkify-gh-usernames/issues"
   },
-  "homepage": "https://github.com/yeskunall/linkify-gh-usernames#readme",
+  "repository": "https://github.com/yeskunall/linkify-gh-usernames.git",
+  "license": "MIT",
+  "author": {
+    "name": "Kunall Banerjee",
+    "email": "hey@kimchiii.space",
+    "url": "https://kimchiii.space"
+  },
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "ava && tsd"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "proseWrap": "always",
+    "singleQuote": false,
+    "trailingComma": "all"
+  },
   "dependencies": {
-    "create-html-element": "^2.0.0"
+    "create-html-element": "4.0.1"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "xo": "^0.21.1"
+    "ava": "6.1.2",
+    "prettier": "3.2.5",
+    "tsd": "0.30.7"
   },
-  "xo": {
-    "envs": [
-      "node",
-      "browser"
-    ],
-    "space": true
+  "packageManager": "pnpm@8.15.4",
+  "engines": {
+    "node": ">=18"
   }
 }

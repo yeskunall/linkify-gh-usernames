@@ -1,19 +1,31 @@
-import test from 'ava';
+import test from "ava";
 
-import m from '.';
+import linkifyUsernames from "./index.js";
 
-test('main', t => {
-  t.is(m('Hi @yeskunall!'), 'Hi <a href="https://github.com/yeskunall">@yeskunall</a>!');
+test("main", t => {
+  t.is(
+    linkifyUsernames("Hi @yeskunall!"),
+    'Hi <a href="https://github.com/yeskunall">@yeskunall</a>!',
+  );
+});
 
-  t.is(m('Hi @yeskunall!', {
-    value: '@nisostech'
-  }), 'Hi <a href="https://github.com/yeskunall">@nisostech</a>!');
+test("`attributes` option", t => {
+  t.is(
+    linkifyUsernames("Ping @yeskunall and @21kb!", {
+      attributes: {
+        class: "github",
+        target: "_blank",
+      },
+    }),
+    'Ping <a href="https://github.com/yeskunall" class="github" target="_blank">@yeskunall</a> and <a href="https://github.com/21kb" class="github" target="_blank">@21kb</a>!',
+  );
+});
 
-  t.is(m('Ping @yeskunall and @nisostech!', {
-    attributes: {
-      class: 'github',
-      target: '_blank'
-    }
-  }),
-  'Ping <a href="https://github.com/yeskunall" class="github" target="_blank">@yeskunall</a> and <a href="https://github.com/nisostech" class="github" target="_blank">@nisostech</a>!');
+test("`value` option", t => {
+  t.is(
+    linkifyUsernames("Hi @yeskunall!", {
+      value: "@21kb",
+    }),
+    'Hi <a href="https://github.com/yeskunall">@21kb</a>!',
+  );
 });
